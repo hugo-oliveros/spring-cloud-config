@@ -19,8 +19,8 @@ spring:
         - id: category-service
           uri: lb://funciones/api/v1
           predicates:
-            - Path=/*
+            - Path=/api/*
           filters:
-            - StripPrefix=0
+            - StripPrefix=1
 
 
