@@ -16,8 +16,8 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: tramitein
-      - uri: lb://funciones/api/v1
+      - id: funciones
+      - uri: lb://FUNCIONES
       - predicates:
           Path=/funciones/api/v1/**
 
