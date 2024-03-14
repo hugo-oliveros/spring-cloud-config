@@ -17,11 +17,10 @@ spring:
     gateway:
       routes:
         - id: category-service
-          uri: lb://category-service
+          uri: lb://funciones/api/v1
           predicates:
-            - Path=/api/cate/*
-            - Query=categoryId
+            - Path=/*
           filters:
-            - StripPrefix=2
+            - StripPrefix=0
 
 
