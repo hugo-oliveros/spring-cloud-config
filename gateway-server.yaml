@@ -1,0 +1,27 @@
+server:
+  port: ${port:0}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.18.59:8761/eureka/
+  instance:
+    hostname: localhost
+    instance-id:
+      ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: category-service
+          uri: lb://category-service
+          predicates:
+            - Path=/api/cate/*
+            - Query=categoryId
+          filters:
+            - StripPrefix=2
+
+
