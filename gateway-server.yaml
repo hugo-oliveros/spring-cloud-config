@@ -16,11 +16,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: category-service
-          uri: lb://funciones/api/v1
+        - id: funciones
+          uri: lb://funciones
           predicates:
-            - Path=/api/*
+            - Path=/api/cate/*
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
 
 
