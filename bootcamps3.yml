@@ -18,8 +18,8 @@ spring:
       ddl-auto: update
   jackson:
     serialization:
-      write-dates-as-timestamps: 'false'
-      INDENT_OUTPUT: 'true'
+      write-dates-as-timestamps: false
+      INDENT_OUTPUT: true
   data:
     mongodb:
       database: local
