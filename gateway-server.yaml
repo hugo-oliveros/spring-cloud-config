@@ -16,11 +16,9 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: funciones
-          uri: lb://funciones/api/v1
-          predicates:
-            - Path=/api/cate/*
-          filters:
-            - StripPrefix=2
+      - id: tramitein
+      - uri: lb://funciones/api/v1
+      - predicates:
+          Path=/funciones/api/v1/**
 
 
