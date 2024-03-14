@@ -1,51 +1,30 @@
-server:
-  port: 8087
-
-user:
-  backend: administrator
-user:
-  aplicationName: bootCamp50S3
-
-user:
-    endpoints1: http://localhost:8085
-
 management:
   endpoints:
     web:
-      exposure:include: *
-      
-
+      exposure:
+        include: '*'
 spring:
   thymeleaf:
-    cache: true
-spring:
-  jackson:
-    serialization:
-      INDENT_OUTPUT: true
-spring:
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
-
-spring:
-    jpa:
-      show-sql: true
-spring:
-    jpa:
+    cache: 'true'
+  jpa:
+    properties:
       hibernate:
-        ddl-auto:update
-spring:
-    jpa:
-      properties:
-        hibernate:
-          jdbc.batch_size: 50
-
-spring:
-  data:
-    mongodb:
-      uri: mongodb://192.168.18.59:27017/collection?retryWrites=true&w=majority
-spring:
+        jdbc:
+          batch_size: '50'
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+  jackson:
+    serialization:
+      write-dates-as-timestamps: 'false'
+      INDENT_OUTPUT: 'true'
   data:
     mongodb:
       database: local
-
+      uri: mongodb://192.168.18.59:27017/collection?retryWrites=true&w=majority
+user:
+  endpoints1: http://localhost:8085
+  backend: administrator
+  aplicationName: bootCamp50S3
+server:
+  port: '8087'
