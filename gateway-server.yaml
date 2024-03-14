@@ -17,7 +17,7 @@ spring:
     gateway:
       routes:
         - id: funciones
-          uri: lb://FUNCIONES
+          uri: lb://BOOTCAMPS3
           predicates:
             - Path=/funciones/api/v1/*
 
