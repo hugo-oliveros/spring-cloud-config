@@ -20,7 +20,6 @@ spring:
           uri: lb://BOOTCAMPS3
           predicates:
             - Path=/funciones/api/v1/**
-            - Query=param
           filters:
             - StripPrefix=1
 
