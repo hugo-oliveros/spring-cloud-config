@@ -17,7 +17,7 @@ spring:
     gateway:
       routes:
         - id: funciones
-          uri: lb://funciones
+          uri: lb://funciones/api/v1
           predicates:
             - Path=/api/cate/*
           filters:
