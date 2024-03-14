@@ -7,7 +7,7 @@ user:
   aplicationName: bootCamp50S3
 
 user:
-  endpoints1: http://localhost:8085
+    endpoints1: http://localhost:8085
 
 management:
   endpoints:
